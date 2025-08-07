@@ -64,7 +64,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 48px;
 }
 
 .sidebar-photo {
@@ -74,7 +73,6 @@
   object-fit: cover;
   border: 3px solid #6366f1;
   box-shadow: 0 2px 12px rgba(99,102,241,0.13);
-  margin-bottom: 16px;
 }
 
 .sidebar-name {
