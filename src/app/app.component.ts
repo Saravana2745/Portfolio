@@ -181,6 +181,14 @@ export class AppComponent implements AfterViewInit {
   }
 
   onSubmit() {
+     if (/^[^@\s]+@gmail\.com$/.test(this.contact.email)) {
+    // Proceed with sending the message or your logic
+    this.formStatus = 'Message sent successfully!';
+    // Optionally reset form
+    this.contact = { name: '', email: '', message: '' };
+  } else {
+    this.formStatus = 'Please enter a valid Gmail address.';
+  }
     fetch('http://localhost:3000/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
